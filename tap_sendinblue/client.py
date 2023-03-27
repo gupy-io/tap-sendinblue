@@ -56,7 +56,7 @@ class SendInBlueStream(RESTStream):
         """
         return APIKeyAuthenticator.create_for_stream(
             self,
-            key="x-api-key",
+            key="api-key",
             value=self.config.get("api_key", ""),
             location="header",
         )
