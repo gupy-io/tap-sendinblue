@@ -3,9 +3,9 @@
 from __future__ import annotations
 
 
-
 from tap_sendinblue.client import SendInBlueStream
 from tap_sendinblue import schemas
+
 
 class CampaignsStream(SendInBlueStream):
     """Define custom stream."""
@@ -20,7 +20,6 @@ class CampaignsStream(SendInBlueStream):
 class SmtpAggregatedReportStream(SendInBlueStream):
     name = "smtp_report"
     path = "/smtp/statistics/aggregatedReport"
-    primary_keys = ["id"]
     replication_key = None
     schema = schemas.smtp_report
 
