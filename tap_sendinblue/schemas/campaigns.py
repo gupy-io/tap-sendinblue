@@ -3,12 +3,12 @@ from singer_sdk import typing as th
 schema = th.PropertiesList(
     th.Property("id", th.IntegerType),
     th.Property("name", th.StringType),
-    th.Property("scheduledAt", th.DateTimeType),
-    th.Property("createdAt", th.DateTimeType),
-    th.Property("modifiedAt", th.DateTimeType),
-    th.Property("sentDate", th.DateTimeType),
-    th.Property("shareLink", th.StringType),
-    th.Property("subject", th.StringType),
+    th.Property("scheduledAt", th.StringType, required=False),
+    th.Property("createdAt", th.DateTimeType, required=False),
+    th.Property("modifiedAt", th.DateTimeType, required=False),
+    th.Property("sentDate", th.DateTimeType, required=False),
+    th.Property("shareLink", th.StringType, required=False),
+    th.Property("subject", th.StringType, required=False),
     th.Property("statistics",
                 th.ObjectType(
                     th.Property("mirrorClick", th.IntegerType),
