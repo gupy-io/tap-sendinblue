@@ -31,7 +31,7 @@ class TapSendInBlue(Tap):
         th.Property(
             "api_url",
             th.StringType,
-            default="https://api.sendinblue.com/v3",
+            default="https://api.brevo.com/v3/",
             description="The url for the API service",
         ),
     ).to_dict()
